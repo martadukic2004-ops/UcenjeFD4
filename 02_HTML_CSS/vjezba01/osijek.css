@@ -1,0 +1,39 @@
+body{
+    background-color: antiquewhite;
+}
+
+h1{
+    color: #245599;
+    text-align: center;
+    font-family: sans-serif;
+    background-color: bisque;
+}
+
+h2{
+    color: #073040;
+    background-color: aquamarine;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.naslov{
+    color: #007856;
+}
+
+div p{
+    color: darkorange;
+    background-color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#sadrzaj{
+    font-family: sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+ul li::before{
+    content: '🐯';
+}
