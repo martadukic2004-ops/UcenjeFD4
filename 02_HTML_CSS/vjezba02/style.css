@@ -1,0 +1,45 @@
+:root{
+    --pozadina: #ecf0f1; 
+    --primarna-boja: #f7f409; 
+    --pozadina-container: #194567; 
+}
+
+body{
+    background-color: var(--pozadina);
+}
+
+.container{
+    width: 90%;
+    /* border: 1px solid black; */
+    margin: auto;
+    outline-style: solid;
+    outline-width: 10px;
+    /* outline-offset: 10px; */
+    outline-color: var(--primarna-boja);
+
+/* padding-top: 7rem;
+padding-right: 9rem;
+padding-bottom: 4rem;
+padding-left: 10rem;  */
+
+/* padding: 5rem; */
+
+/*redoslijed je top right bottom left*/
+/* padding: 1rem 2rem 3rem 4rem; */
+
+background-color: var(--pozadina-container);
+}
+
+h1{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#lista{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    border: 2px dashed black;
+    border-radius: 0.5rem;
+    padding: 4rem;
+    margin: 4rem;
+}
