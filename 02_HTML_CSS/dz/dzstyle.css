@@ -51,6 +51,7 @@ u{
 
 figure{
     text-align: center;
+    font-style: italic;
 }
 
 .html-word{
@@ -66,5 +67,9 @@ h3{
 }
 
 .verzije-boks{
-    text-align: center;
+    border-left: 4px solid #1e90ff;
+    padding-left: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 900px;
 }
