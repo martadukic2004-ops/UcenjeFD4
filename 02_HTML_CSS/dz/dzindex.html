@@ -8,23 +8,19 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="page">
         <header>
 <h1>
     POVIJEST HTML-A
 </h1>
 
-<h2>
-    OD JEDNOSTAVNOG TEKSTA DO MODERNOG WEBA
+<h2><span>OD JEDNOSTAVNOG TEKSTA DO MODERNOG WEBA</span>
 </h2>
         </header>
-    </div>
     
-<section>
     <p>
         Sve je počelo 1989. godine u CERN-u. <u> Tim Berners-Lee </u> je osmislio sustav koji bi istraživačima omogućio dijeljenje dokumenta. Taj sustav postao je poznat kao <span class="highlight"> World wide web. </span>
     </p>
-</section>
 
 <figure>
 <img src="tim.jfif" alt="Tim Berners-Lee">
@@ -40,35 +36,114 @@
     </p>
 </section>
 
-<section class="verzije">
 
 <h3>
     Ključne verzije
 </h3>
 
-<div class="verzije-boks">
+<section class="verzije">
+<dl>
+    <dt>
+        <strong>01. HTML 1.0 (1991)</strong>
+    </dt>
+    <dd>
+        Prva neslužbena verzija. Sadržavala je samo 18 tagova.
+    </dd>
 
-     <dl>
-        <dt><strong><span class="01. HTML 1.0">01. HTML 1.0 (1991)</span></strong><br>
-    Prva neslužbena verzija. Sadržavala je samo 18 tagova.</dt>
+    <dt>
+<strong>02. HTML 2.0 (1995)</strong>
+    </dt>
+    <dd>
+Prvi neslužbeni standard. (RFC 1866).
+    </dd>
 
-    <dt><strong>02. HTML 2.0 (1995)</strong><br>
-    Prvi neslužbeni standard. (RFC 1866).</dt>
+    <dt>
+<strong>03. HTML 3.2 (1997)</strong>
+    </dt>
+    <dd>
+Uvedene tablice i appleti. "Rat preglednika je bio u punom jeku".
+    </dd>
 
-    <dt><strong>03. HTML 3.2 (1997)</strong><br>
-    Uvedene tablice i appleti. "Rat preglednika je bio u punom jeku".</dt>
+    <dt>
+<strong>04. HTML 4.01 (1999)</strong>
+    </dt>
+    <dd>
+Dominatna verzija gotovo desteljeće. Odvajanje stila (CSS) od sadržaja.
+    </dd>
 
-    <dt><strong>04. HTML 4.01 (1999)</strong><br>
-        Dominatna verzija gotovo desteljeće. Odvajanje stila (CSS) od sadržaja.</dt>
-        
-    <dt><strong>05. HTML5 (2014)</strong><br>
-        Revolucija. Multimedija bez dodataka ('video', 'audio') semantički elementi.</dt>
+    <dt>
+<strong>05. HTML5 (2014)</strong>
+    </dt>
+    <dd>
+Revolucija. Multimedija bez dodataka ('video', 'audio') semantički elementi.
+    </dd>
+</dl>
+</section>
 
-     </dl>
-        
+<h3>
+    Struktura dokumenta
+</h3>
+
+<p>
+    Osnovna struktura HTML5 dokumenta izgleda ovako:
+</p>
+
+<div>
+
+<pre class="crna-kutija">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="hr"&gt;
+    &lt;head&gt;
+        &lt;title&gt;Naslov&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;Pozdrav Svijete!&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
 </div>
 
+<p>
+    Da biste spremili ovaj kod, pritisnite Ctrl + S na tipkovnici 
+</p>
+
+
+<h3>
+        Važni pojmovi
+    </h3>
+
+<section class="pojmovi-box">
+    <p><strong class="plava-skracenica">HTTP</strong> Hypertext Transfer Protocol- protokol za prijenos podataka.</p>
+    <p><strong class="plava-skracenica">URI</strong> Uniform Resource Identifier- adresa resursa na webu.</p>
 </section>
+
+    
+<h3>
+    Filozofija Weba
+</h3>
+
+<section class="filozofija">
+<p>
+    Snaga Weba je u njegovoj univerzalnosti. Pristup svima bez obzira na invaliditet, ključni je aspekt. <br>
+    -Tim Berners-Lee
+</p>
+</section>
+
+<p>
+    Danas HTML koristimo zajedno sa CSS-om i JavaScriptom.
+</p>
+
+<footer>
+<p>
+   Autor stranice: Marta Đukić<br>
+kontakt: martadukic@gmail.com <br>
+22. lipnja 2026. 
+</p>
+</footer>
+
+</div>
+
 
 </body>
 </html>
