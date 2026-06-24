@@ -1,0 +1,41 @@
+body{
+    background-color: antiquewhite;
+}
+
+table caption{
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1rem;
+    color: brown;
+}
+
+table,td,th{
+border: 1px solid black;
+border-collapse: collapse;
+}
+
+table{
+    width: 100%;
+}
+
+th{
+    background-color: #f0f1f0;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 1rem;
+}
+
+tbody tr{
+    background-color: #a47864;
+}
+
+tfoot tr{
+    background-color: #ffd98f;
+}
+
+tbody tr:hover{
+    background-color: cadetblue;
+}
+
+
