@@ -1,0 +1,64 @@
+body{
+    background-color: whitesmoke;
+}
+
+.container{
+    background-color: white;
+    padding: 1rem;
+    margin: 2rem;
+    border-radius: 10px;
+    font-family: sans-serif;
+}
+
+h1{
+    font-size: 1.7rem;
+    border-bottom: 1px solid blue;
+    display: inline-block;
+    padding: 3px;
+}
+
+legend{
+    color: darkgray;
+    font-weight: bolder;
+}
+
+button{
+    background-color: green;
+    color: white;
+}
+
+
+.table{
+    background-color: whitesmoke;
+    margin: 2rem;
+    padding: 1rem;
+}
+
+h2{
+    border-bottom: 1px solid blue;
+    padding: 3px;
+    display: inline-block;
+}
+
+table{
+    width: 100%;
+}
+
+thead{
+    background-color: blue;
+    color: white;
+}
+
+table,td,th{
+border-bottom: 1px solid whitesmoke;
+border-top: 1px solid whitesmoke;
+border-collapse: collapse;
+}
+
+tbody tr :last-child{
+    color: red;
+    text-align: center;
+}
+
+
+
