@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f8e7d5;
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #333;
+    padding: 30px;
+}
+
+h1{
+    text-align: center;
+    color: darkred;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+body > p{
+    text-align: center;
+    font-style: italic;
+    color: gray;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+nav{
+    background-color: darkred;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li{
+    padding: 18px 30px;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+nav li:hover{
+    background-color: rgb(120,0,0);
+}
+
+.radnja{
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px lightgray;
+    margin-bottom: 30px;
+}
+
+.radnja h2{
+    border-left: 6px solid darkred;
+    padding-left: 12px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.radnja p{
+    width: 28%;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 1.7;
+    font-size: 1.3rem;
+}
+
+blockquote{
+    margin-top: 20px;
+    border-left: 5px solid lightgray;
+    padding-left: 15px;
+    font-style: italic;
+    color: #444;
+}
+
+iframe{
+    width: 68%;
+    height: 400px;
+    margin-left: 20px;
+    border: none;
+    vertical-align: top;
+}
+
+h2{
+    background: white;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    margin-top: 20px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background: white;
+    box-shadow: 0 0 12px lightgray;
+}
+
+th{
+    background: darkred;
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+td{
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+
+h3{
+    background: white;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    font-size: 2rem;
+}
+
+form{
+    background: white;
+    padding: 25px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 0 12px lightgray;
+}
+
+label{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+input,textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+button{
+    background: darkred;
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover{
+    background: rgb(120,0,0);
+}
+
+footer{
+    text-align: center;
+    color: gray;
+    margin-top: 50px;
+    padding: 20px;
+}
