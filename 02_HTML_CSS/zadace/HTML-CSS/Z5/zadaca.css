@@ -180,6 +180,7 @@ iframe{
 .podaci p{
     margin-bottom: 15px;
     line-height: 1.7;
+    font-style: italic;
 }
 
 form{
