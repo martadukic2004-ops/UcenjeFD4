@@ -1,0 +1,11 @@
+div.cell{
+    padding: 2rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 1024px), screen and (min-width: 2560px) {
+.show-for-large-only {
+display: none !important;
+}
+}
