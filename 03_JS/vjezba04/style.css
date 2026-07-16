@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f0f2f5;
+    background: lightgreen;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,11 +9,12 @@ body {
 }
 
 .container {
-    background: white;
+    background: red;
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     width: 600px;
+    color: whitesmoke;
 }
 
 h1 { color: #333; font-size: 1.5rem; text-align: center; }
@@ -25,7 +26,7 @@ h1 { color: #333; font-size: 1.5rem; text-align: center; }
     margin-bottom: 20px;
 }
 
-.input-group label { display: block; font-size: 0.8rem; color: #666; margin-bottom: 5px; }
+.input-group label { display: block; font-size: 0.8rem; color: whitesmoke; margin-bottom: 5px; }
 
 input, select, button {
     width: 100%;
@@ -36,8 +37,8 @@ input, select, button {
 }
 
 button {
-    background: #007bff;
-    color: white;
+    background: lightgreen;
+    color: black;
     border: none;
     margin-top: 15px;
     cursor: pointer;
@@ -45,7 +46,7 @@ button {
     transition: background 0.3s;
 }
 
-button:hover { background: #0056b3; }
+button:hover { background: darkgreen; color: whitesmoke; }
 
 .result-area {
     margin-top: 25px;

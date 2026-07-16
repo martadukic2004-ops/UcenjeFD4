@@ -25,7 +25,7 @@ console.log(rez)
 let i = 0
 i = i + 1
 i += 1
-i ++
+i++
 console.log(i)
 
 i = 0
@@ -63,7 +63,7 @@ console.log(godine >= 18)
 //AND, OR i NOT
 //&& -> AND, || (Alt Gr + W) -> OR, ! -> NOT   --> U JS se ne smije koristiti & za logičko i jer je & binarno množenje
 const punoljetan = godine >= 18
-console.log(uvjet && punoljetan) //false i true će uvijek dati false, vrijede pravila boolovih tablica  *tu stavit adresu slike*
+console.log(uvjet && punoljetan) //false i true će uvijek dati false, vrijede pravila boolovih tablica  https://introcs.cs.princeton.edu/java/71boolean/images/truth-table.png
 
 console.log(uvjet || punoljetan) //true 
 console.log(!uvjet) //uvjet je prije bio false, sad će se ispisati true
@@ -79,7 +79,7 @@ console.log(x + y) //75, vrijednost string i broj su se spojili
 
 
 //spread operator -> operator proširivanja -> ...
-const niz = [1,2]
+const niz = [1, 2]
 console.table(niz)
 
 const noviNiz = [0, ...niz, 3]
@@ -100,12 +100,12 @@ console.table(polaznik)
 
 
 //suprotno od spread je destructing operator -> operator destrukcije
-const [prvi, drugi] = [1,2]
+const [prvi, drugi] = [1, 2]
 // varijabla prvi ima vrijednost 1, a varijabla drugi ima vrijednost 2
 console.log(prvi, drugi)
 
 // destrukcija objekta 
-const {prezime, ...meniBitno} = polaznik
+const { prezime, ...meniBitno } = polaznik
 console.table(meniBitno)
 
 

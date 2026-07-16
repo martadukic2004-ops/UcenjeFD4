@@ -14,10 +14,10 @@ document.getElementById('btnRun').addEventListener('click', () => {
         // Početak 1. zadatka
         // 1. Zbrajanje brojeva: Zbroji A i B (konverzija u Number)
 
-        const aBroj = Number (a)
-        const bBroj = Number (b)
+        const aBroj = Number(a)
+        const bBroj = Number(b)
         rezultat = aBroj + bBroj
-    
+
         // Kraj 1. zadatka
     }
 
@@ -32,93 +32,112 @@ document.getElementById('btnRun').addEventListener('click', () => {
         rezultat = a + b   //pravi odgovor
 
         // Kraj 2. zadatka
-        
+
     }
 
     if (task === '3') {
         // Početak 3. zadatka
         // 3. Aritmetika i zagrade: Izračunaj (A + B) * C - D
 
-        const aBroj= Number (a)
-        const bBroj = Number (b)
-        const cBroj = Number (c)
-        const dBroj = Number (d)
+        const aBroj = Number(a)
+        const bBroj = Number(b)
+        const cBroj = Number(c)
+        const dBroj = Number(d)
 
         rezultat = (aBroj + bBroj) * cBroj - dBroj
 
         // Kraj 3. zadatka
-        
+
     }
 
     if (task === '4') {
         // Početak 4. zadatka
         // 4. Modulo operator: Ostatak pri dijeljenju A s B (A % B)
 
-        const aBroj= Number (a)
-        const bBroj = Number (b)
-        rezultat = aBroj % bBroj 
+        const aBroj = Number(a)
+        const bBroj = Number(b)
+        rezultat = aBroj % bBroj
 
         // Kraj 4. zadatka
-        
+
     }
 
     if (task === '5') {
         // Početak 5. zadatka
         // 5. Stroga jednakost: Jesu li A i B identični po vrijednosti i tipu (A === B)?
 
+        rezultat = a === b
 
         // Kraj 5. zadatka
-        
+
     }
 
     if (task === '6') {
         // Početak 6. zadatka
         // 6. Relacijski operatori: Je li zbroj A i B veći od umnoška C i D?
 
+        const aBroj = Number(a)
+        const bBroj = Number(b)
+        const cBroj = Number(c)
+        const dBroj = Number(d)
+        rezultat = (aBroj + bBroj) >= (cBroj + dBroj)
 
         // Kraj 6. zadatka
-        
+
     }
 
     if (task === '7') {
         // Početak 7. zadatka
         // 7. Logički AND (&&): Je li A pozitivno I istovremeno B parno?
 
+        const aBroj = Number(a)
+        const bBroj = Number(b)
+        rezultat = aBroj > 0 && bBroj % 2 === 0
 
         // Kraj 7. zadatka
-        
+
     }
 
     if (task === '8') {
         // Početak 8. zadatka
         // 8. Logički OR (||): Je li barem jedno od polja C ili D prazan string?
 
+        rezultat = c === "" || d === ""
 
         // Kraj 8. zadatka
-        
+
     }
 
     if (task === '9') {
         // Početak 9. zadatka
         // 9. Operator typeof: Ispiši tip podatka za izraz (A * B)
 
+        const aBroj = Number(a)
+        const bBroj = Number(b)
+        rezultat = typeof (aBroj * bBroj)
 
         // Kraj 9. zadatka
-        
+
     }
 
     if (task === '10') {
         // Početak 10. zadatka
         // 10. Ternarni operator: Ako je A > B ispiši vrijednost C, inače ispiši D
 
+        const aBroj = Number(a)
+        const bBroj = Number(b)
+        rezultat = aBroj > bBroj ? c : d
 
         // Kraj 10. zadatka
-        
+
     }
     if (task === '11') {
         // Početak 11. zadatka
         // 11. Inkrement / Dekrement: Izračunaj trik izraz (A++ - --B)
 
+        let aBroj = Number(a)
+        let bBroj = Number(b)
+        rezultat = aBroj++ - --bBroj
 
         // Kraj 11. zadatka
     }
@@ -127,7 +146,9 @@ document.getElementById('btnRun').addEventListener('click', () => {
         // Početak 12. zadatka
         // 12. Različito (!= vs !==): Usporedi A i B po vrijednosti (!=) i po tipu (!==)
 
-
+        let aBroj = Number(a)
+        let bBroj = Number(b)
+        
         // Kraj 12. zadatka
     }
 
