@@ -148,6 +148,7 @@ document.getElementById('btnRun').addEventListener('click', () => {
 
         let aBroj = Number(a)
         let bBroj = Number(b)
+        rezultat = aBroj != bBroj, aBroj !== bBroj
         
         // Kraj 12. zadatka
     }
