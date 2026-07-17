@@ -146,10 +146,8 @@ document.getElementById('btnRun').addEventListener('click', () => {
         // Početak 12. zadatka
         // 12. Različito (!= vs !==): Usporedi A i B po vrijednosti (!=) i po tipu (!==)
 
-        let aBroj = Number(a)
-        let bBroj = Number(b)
-        rezultat = aBroj != bBroj, aBroj !== bBroj
-        
+        rezultat = `${a != b}, ${a !== b}`
+
         // Kraj 12. zadatka
     }
 
@@ -157,6 +155,8 @@ document.getElementById('btnRun').addEventListener('click', () => {
         // Početak 13. zadatka
         // 13. Nullish Coalescing (??): Ako je A prazan string, koristi default vrijednost iz B
 
+        // rezultat = a ?? b
+        rezultat = a === "" ? b : a
 
         // Kraj 13. zadatka
     }
@@ -165,6 +165,7 @@ document.getElementById('btnRun').addEventListener('click', () => {
         // Početak 14. zadatka
         // 14. Array i Spread operator (...): Spoji [A, B] i [C, D] u jedan novi niz
 
+        rezultat = [...[a, b], ...[c, d]]
 
         // Kraj 14. zadatka
     }
@@ -173,6 +174,9 @@ document.getElementById('btnRun').addEventListener('click', () => {
         // Početak 15. zadatka
         // 15. Destrukturiranje niza: Iz niza [A, B, C, D] izvuci prva dva elementa u zasebne varijable i ispiši ih u konzolu
 
+        const [prvi, drugi] = [a, b, c, d];
+        console.log(prvi, drugi)
+        // rezultat = prvi + " " + drugi
 
         // Kraj 15. zadatka
     }
@@ -181,6 +185,11 @@ document.getElementById('btnRun').addEventListener('click', () => {
         // Početak 16. zadatka
         // 16. Rad s objektima: Kreiraj JSON objekt { ime: A, grad: B } i ispiši ga u konzolu
 
+        const objekt = {
+            ime: a,
+            grad: b
+        }
+        console.log(objekt)
 
         // Kraj 16. zadatka
     }
@@ -189,6 +198,12 @@ document.getElementById('btnRun').addEventListener('click', () => {
         // Početak 17. zadatka
         // 17. Optional Chaining (?.): Sigurno pročitaj svojstvo iz ugniježđenog objekta
 
+        const korisnik = {
+            adresa: {
+                grad: a
+            }
+        }
+        rezultat = korisnik?.adresa?.grad
 
         // Kraj 17. zadatka
     }
@@ -197,14 +212,13 @@ document.getElementById('btnRun').addEventListener('click', () => {
         // Početak 18. zadatka
         // 18. Logički NOT (!): Obrni logičku vrijednost provjere (je li A veće od B)
 
+        const aBroj = Number(a);
+        const bBroj = Number(b);
+
+        rezultat = !(aBroj > bBroj)
 
         // Kraj 18. zadatka
     }
-
-
-
-
-
 
 
     // Prikaz rezultata na ekranu
