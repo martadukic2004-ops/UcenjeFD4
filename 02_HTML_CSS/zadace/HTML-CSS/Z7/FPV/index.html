@@ -10,7 +10,7 @@
 
 <body>
 
-    <div class="grid-container">
+    <div class="container">
 
         <!-- početak navigacije -->
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -29,7 +29,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="./html/program.html">Kurikulum</a>
                         </li>
-                         <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link" href="./html/kontakt.html">Prijavi se</a>
                         </li>
                     </ul>
@@ -38,9 +38,117 @@
         </nav>
         <!-- završetak navigacije -->
 
+        <!-- alert -->
+        <div class="alert alert-primary" role="alert" style="margin-top: 1rem;">
+            Popust od 20% za rane prijave! <a href="./html/kontakt.html" class="alert-link">Prijavi se danas!</a>.
+        </div>
+        <!-- kraj alerta -->
+
+        <!-- početak karusela -->
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./img/1.dronkarusel.jfif" class="d-block w-100" alt="Vaš operator ne može učitati sliku">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/2.dronkarusel.jfif" class="d-block w-100" alt="Vaš operator ne može učitati sliku">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/3.dronkarusel.jpg" class="d-block w-100" alt="Vaš operator ne može učitati sliku">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- završetak karusela -->
+
+        <!-- početak kartica -->
+        <h2 class="text-center mb-4" style="padding-top: 2rem;">Zašto odabrati FPV Akademiju?</h2>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./img/Tehničke vještine.jpg" class="card-img-top"
+                            alt="Vaš operator ne može učitati sliku">
+                        <div class="card-body">
+                            <h5 class="card-title">Tehničke vještine</h5>
+                            <p class="card-text">Naučite sastavljati, održavati i podešavati FPV dronove kroz praktične
+                                radionice i rad s opremom.</p>
+                            <a href="./html/program.html" class="btn btn-primary">Idi na kurikulum</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./img/Stem.jpg" class="card-img-top" alt="Vaš operator ne može učitati sliku">
+                        <div class="card-body">
+                            <h5 class="card-title">STEM</h5>
+                            <p class="card-text">Razvijajte znanja iz tehnologije, elektronike i programiranja kroz
+                                zanimljive projekte i praktičan rad.</p>
+                            <a href="./html/program.html" class="btn btn-primary">Idi na kurikulum</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./img/karijera.jfif" class="card-img-top" alt="Vaš operator ne može učitati sliku">
+                        <div class="card-body">
+                            <h5 class="card-title">Karijera</h5>
+                            <p class="card-text">Steknite iskustvo i vještine koje mogu biti temelj za daljnje
+                                obrazovanje ili profesionalnu karijeru u svijetu dronova.</p>
+                            <a href="./html/program.html" class="btn btn-primary">Idi na kurikulum</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- završetak kartica -->
+
+        <!-- početak footera -->
+        <footer class="bg-dark text-white mt-5 py-4">
+            <div class="container">
+                <div class="row text-center">
+
+                    <div class="col-md-6 mb-3">
+                        <h5>FPV Akademija</h5>
+                        <p class="mb-0">
+                            Centar za učenje upravljanja FPV dronovima kroz teoriju i praktičnu nastavu.
+                        </p>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <h5>Kontakt</h5>
+                        <p class="mb-1"> info@fpvakademija.hr</p>
+                        <p class="mb-0"> +385 91 123 4567</p>
+                    </div>
+
+                </div>
+
+                <hr class="border-secondary">
+
+                <p class="text-center mb-0">
+                    © 2026 FPV Akademija. Sva prava pridržana.
+                </p>
+            </div>
+        </footer>
+        <!-- kraj footera -->
     </div>
-
-
 
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script>
