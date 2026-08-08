@@ -1,0 +1,102 @@
+body{
+    background-color: antiquewhite;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.container{
+    width: 100%;
+    max-width: 800px;
+}
+
+.header{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.card,
+.resultCard {
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap
+}
+
+.selectWrap {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column
+}
+
+.selectWrap span,
+.field span {
+    font-size: .85rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+    color: #555
+}
+
+select,
+input[type="text"] {
+    padding: .75rem;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s
+}
+
+select:focus,
+input:focus {
+    border-color: black;
+}
+
+.btn {
+    background-color: blue;
+    color: black;
+    padding: .75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem
+}
+
+.field {
+    display: flex;
+    flex-direction: column
+}
+
+.resultCard {
+    text-align: center;
+}
+
+.result {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-top: .5rem
+}
+
+
+@media (max-width:600px) {
+    .controls {
+        flex-direction: column;
+        align-items: stretch
+    }
+}

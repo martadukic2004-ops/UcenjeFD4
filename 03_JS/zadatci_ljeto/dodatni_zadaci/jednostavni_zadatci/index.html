@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jednostavni ljetni zadaci</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <header class="header">
+            <h1>Kalkulator za razne zadatke</h1>
+            <p>Odaberi zadatak i unesi vrijednosti A i B</p>
+        </header>
+
+        <section class="card">
+            <div class="controls">
+                <label class="selectWrap">
+                    <span>Odaberi zadatak</span>
+                    <select id="zadatak">
+                        <option value="1">1. Izračun površine pravokutnika</option>
+                        <option value="2">2. Provjera jeli broj pozitivan, negativan ili jednak nuli</option>
+                        <option value="3">3. Zbroj elemenata niza</option>
+                        <option value="4">4. Prosjek ocjena</option>
+                        <option value="5">5. Ispis Fibonaccijevog niz</option>
+                        <option value="6">6. Preokret stringa</option>
+                        <option value="7">7. Brojanje samoglasnika</option>
+                        <option value="8">8. Pretvorba temperature</option>
+                        <option value="9">9. Sortiranje niza</option>
+                        <option value="10">10. Kalkulator</option>
+                    </select>
+                </label>
+
+                <button id="izvedi" class="btn" type="button">Izvrši</button>
+            </div>
+
+            <div class="grid">
+                <label class="field">
+                    <span>A</span>
+                    <input id="a" type="text">
+                </label>
+
+                <label class="field">
+                    <span>B</span>
+                    <input id="b" type="text">
+                </label>
+            </div>
+        </section>
+
+        <section class="resultCard">
+            <h2>Rezultat</h2>
+            <div id="rezultat" class="result" aria-live="polite">—</div>
+        </section>
+    </main>
+
+    <script src="skripta.js"></script>
+
+</body>
+
+</html>
