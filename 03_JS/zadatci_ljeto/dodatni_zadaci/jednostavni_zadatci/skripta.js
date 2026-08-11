@@ -1,11 +1,169 @@
 const gumb = document.getElementById('izvedi')
+const rezultat = document.getElementById('rezultat')
+
+const odabirZadatka = document.getElementById('zadatak')
+
+const poljeA = document.getElementById('poljeA')
+const poljeB = document.getElementById('poljeB')
+const poljeOperacija = document.getElementById('poljeOperacija')
+const poljePretvorba = document.getElementById('pretvorba')
+
+const labelA = document.getElementById('labelA')
+const labelB = document.getElementById('labelB')
+
+const upute = document.getElementById('upute')
+
+
+odabirZadatka.addEventListener('change', () => {
+
+    const zadatak = odabirZadatka.value
+
+    if (zadatak === '1') {
+
+        poljeA.style.display = ''
+        poljeB.style.display = ''
+        poljeOperacija.style.display = 'none'
+        document.getElementById('b').style.display = ''
+        poljePretvorba.style.display = 'none'
+
+        labelA.innerHTML = 'Duljina'
+        labelB.innerHTML = 'Širina'
+
+        upute.innerHTML = 'Unesite duljinu i širinu pravokutnika'
+    }
+
+    if (zadatak === '2') {
+
+        poljeA.style.display = ''
+        poljeB.style.display = 'none'
+        poljeOperacija.style.display = 'none'
+        document.getElementById('b').style.display = ''
+        poljePretvorba.style.display = 'none'
+
+        labelA.innerHTML = 'Unesite broj'
+
+        upute.innerHTML = 'Unesite broj koji želite provjeriti.'
+    }
+
+    if (zadatak === '3') {
+
+        poljeA.style.display = ''
+        poljeB.style.display = 'none'
+        poljeOperacija.style.display = 'none'
+        document.getElementById('b').style.display = ''
+        poljePretvorba.style.display = 'none'
+
+        labelA.innerHTML = 'Unesite brojeve'
+
+        upute.innerHTML = 'Unesite više brojeva odvojenih zarezima.'
+    }
+
+    if (zadatak === '4') {
+
+        poljeA.style.display = ''
+        poljeB.style.display = ''
+        poljeOperacija.style.display = 'none'
+        document.getElementById('b').style.display = ''
+        poljePretvorba.style.display = 'none'
+
+        labelA.innerHTML = 'Broj ocjena'
+        labelB.innerHTML = 'Ocjene'
+
+        upute.innerHTML = 'Unesite broj ocjena u A, a ocjene u B odvojene zarezima.'
+    }
+
+    if (zadatak === '5') {
+
+        poljeA.style.display = ''
+        poljeB.style.display = 'none'
+        poljeOperacija.style.display = 'none'
+        document.getElementById('b').style.display = ''
+        poljePretvorba.style.display = 'none'
+
+        labelA.innerHTML = 'Broj elemenata'
+
+        upute.innerHTML = 'Unesite koliko elemenata Fibonaccijevog niza želite ispisati.'
+    }
+
+    if (zadatak === '6') {
+
+        poljeA.style.display = ''
+        poljeB.style.display = 'none'
+        poljeOperacija.style.display = 'none'
+        document.getElementById('b').style.display = ''
+        poljePretvorba.style.display = 'none'
+
+        labelA.innerHTML = 'Unesite tekst'
+
+        upute.innerHTML = 'Unesite tekst koji želite preokrenuti.'
+    }
+
+    if (zadatak === '7') {
+
+        poljeA.style.display = ''
+        poljeB.style.display = 'none'
+        poljeOperacija.style.display = 'none'
+        document.getElementById('b').style.display = ''
+        poljePretvorba.style.display = 'none'
+
+        labelA.innerHTML = 'Unesite tekst'
+
+        upute.innerHTML = 'Unesite tekst u kojem želite prebrojati samoglasnike.'
+    }
+
+    if (zadatak === '8') {
+
+        poljeA.style.display = ''
+        poljeB.style.display = ''
+        poljeOperacija.style.display = 'none'
+
+        labelA.innerHTML = 'Temperatura'
+        labelB.innerHTML = 'Pretvorba'
+
+        document.getElementById('b').style.display = 'none'
+        poljePretvorba.style.display = ''
+
+        upute.innerHTML = 'Unesite temperaturu i odaberite smjer pretvorbe.'
+    }
+
+    if (zadatak === '9') {
+
+        poljeA.style.display = ''
+        poljeB.style.display = 'none'
+        poljeOperacija.style.display = 'none'
+        document.getElementById('b').style.display = ''
+        poljePretvorba.style.display = 'none'
+
+        labelA.innerHTML = 'Unesite brojeve'
+
+        upute.innerHTML = 'Unesite više brojeva odvojenih zarezima. Brojevi će biti sortirani uzlazno.'
+    }
+
+    if (zadatak === '10') {
+
+        poljeA.style.display = ''
+        poljeB.style.display = ''
+        poljeOperacija.style.display = ''
+        document.getElementById('b').style.display = ''
+        poljePretvorba.style.display = 'none'
+
+        labelA.innerHTML = 'Prvi broj'
+        labelB.innerHTML = 'Drugi broj'
+
+        upute.innerHTML = 'Unesite dva broja i odaberite matematičku operaciju.'
+    }
+
+})
+
+
+odabirZadatka.dispatchEvent(new Event('change'))
+
 
 gumb.addEventListener('click', () => {
-    const zadatak = document.getElementById('zadatak').value
+
+    const zadatak = odabirZadatka.value
     const a = document.getElementById('a').value
     const b = document.getElementById('b').value
-    const rezultat = document.getElementById('rezultat')
-
 
     //početak 1. zadatka
     if (zadatak === '1') {
@@ -163,6 +321,23 @@ gumb.addEventListener('click', () => {
     //početak 6. zadatka
     if (zadatak === '6') {
         //6. Preokret stringa
+
+        const tekst = a
+
+        if (tekst === '') {
+            rezultat.innerHTML = 'Morate unijeti tekst'
+            return
+        }
+
+        let obrnutiTekst = ''
+
+        for (let i = tekst.length - 1; i >= 0; i--) {
+
+            obrnutiTekst = obrnutiTekst + tekst[i]
+
+        }
+
+        rezultat.innerHTML = obrnutiTekst
     }
     //završetak 6. zadatka
 
@@ -170,6 +345,29 @@ gumb.addEventListener('click', () => {
     //početak 7. zadatka
     if (zadatak === '7') {
         //7. Brojanje samoglasnika
+
+        const tekst = a.toLowerCase()
+
+        if (tekst === '') {
+            rezultat.innerHTML = 'Morate unijeti tekst'
+            return
+        }
+
+        const samoglasnici = 'aeiou'
+        let brojac = 0
+
+        for (let i = 0; i < tekst.length; i++) {
+
+            const znak = tekst[i]
+
+            if (samoglasnici.includes(znak)) {
+
+                brojac++
+
+            }
+        }
+
+        rezultat.innerHTML = brojac
     }
     //završetak 7. zadatka
 
@@ -177,6 +375,29 @@ gumb.addEventListener('click', () => {
     //početak 8. zadatka
     if (zadatak === '8') {
         //8. Pretvorba temperature
+
+        const temperatura = Number(a)
+
+        if (isNaN(temperatura)) {
+            rezultat.innerHTML = 'Temperatura mora biti broj'
+            return
+        }
+
+        if (b === 'CtoF') {
+
+            const fahrenheit = temperatura * 9 / 5 + 32
+
+            rezultat.innerHTML = fahrenheit
+        } else if (b === 'FtoC') {
+
+            const celzijus = (temperatura - 32) * 5 / 9
+
+            rezultat.innerHTML = celzijus
+
+        } else {
+            rezultat.innerHTML = 'Odaberite ispravnu pretvorbu'
+            return
+        }
     }
     //završetak 8. zadatka
 
@@ -184,6 +405,28 @@ gumb.addEventListener('click', () => {
     //početak 9. zadatka
     if (zadatak === '9') {
         //9. Sortiranje niza
+
+        const niz = a.split(',')
+
+        if (!a.includes(',')) {
+            rezultat.innerHTML = 'Vrijednosti u nizu moraju biti odvojene zarezima'
+            return
+        }
+
+        for (let i = 0; i < niz.length; i++) {
+
+            niz[i] = Number(niz[i])
+
+            if (isNaN(niz[i])) {
+                rezultat.innerHTML = 'Sve vrijednosti u nizu moraju biti brojevi'
+                return
+            }
+
+        }
+
+        niz.sort((a, b) => a - b)
+
+        rezultat.innerHTML = niz
     }
     //završetak 9. zadatka
 
@@ -191,6 +434,53 @@ gumb.addEventListener('click', () => {
     //početak 10. zadatka
     if (zadatak === '10') {
         //10. Kalkulator (zbrajanje, dijeljenje, množenje, oduzimanje)
+
+        const numeroA = Number(a)
+        const numeroB = Number(b)
+
+        if (isNaN(numeroA)) {
+            rezultat.innerHTML = 'Vrijednost A nije broj'
+            return
+        }
+
+        if (isNaN(numeroB)) {
+            rezultat.innerHTML = 'Vrijednost B nije broj'
+            return
+        }
+
+        const operacija = document.getElementById('operacija').value
+
+        switch (operacija) {
+
+            case '+':
+                const suma = numeroA + numeroB
+                rezultat.innerHTML = suma
+                break
+
+            case '-':
+
+                const razlika = numeroA - numeroB
+                rezultat.innerHTML = razlika
+                break
+
+            case '/':
+
+                const dijeljenje = numeroA / numeroB
+
+                if (numeroB === 0) {
+                    rezultat.innerHTML = 'Dijeljenje s nulom nije dozvoljeno'
+                    return
+                }
+
+                rezultat.innerHTML = dijeljenje
+                break
+
+            case '*':
+                const umnozak = numeroA * numeroB
+                rezultat.innerHTML = umnozak
+                break
+        }
     }
     //završetak 10. zadatka
+
 })

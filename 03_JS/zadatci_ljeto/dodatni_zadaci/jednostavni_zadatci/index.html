@@ -10,15 +10,19 @@
 
 <body>
     <main class="container">
+
         <header class="header">
             <h1>Kalkulator za razne zadatke</h1>
-            <p>Odaberi zadatak i unesi vrijednosti A i B</p>
+            <p>Odaberi zadatak i unesi željene vrijednosti</p>
         </header>
 
         <section class="card">
+
             <div class="controls">
+
                 <label class="selectWrap">
                     <span>Odaberi zadatak</span>
+
                     <select id="zadatak">
                         <option value="1">1. Izračun površine pravokutnika</option>
                         <option value="2">2. Provjera jeli broj pozitivan, negativan ili jednak nuli</option>
@@ -34,26 +38,60 @@
                 </label>
 
                 <button id="izvedi" class="btn" type="button">Izvrši</button>
+
             </div>
 
+
             <div class="grid">
-                <label class="field">
-                    <span>A</span>
+
+                <label class="field" id="poljeA">
+                    <span id="labelA">A</span>
                     <input id="a" type="text">
                 </label>
 
-                <label class="field">
-                    <span>B</span>
+
+                <label class="field" id="poljeB">
+                    <span id="labelB">B</span>
+
                     <input id="b" type="text">
+
+                    <select id="pretvorba">
+                        <option value="CtoF">Celzijus → Fahrenheit</option>
+                        <option value="FtoC">Fahrenheit → Celzijus</option>
+                    </select>
                 </label>
+
+
+                <label class="field" id="poljeOperacija">
+                    <span>Operacija</span>
+
+                    <select id="operacija">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                    </select>
+                </label>
+
             </div>
+
+
+            <div id="upute"></div>
+
         </section>
+
 
         <section class="resultCard">
             <h2>Rezultat</h2>
-            <div id="rezultat" class="result" aria-live="polite">—</div>
+
+            <div id="rezultat" class="result" aria-live="polite">
+                —
+            </div>
+
         </section>
+
     </main>
+
 
     <script src="skripta.js"></script>
 
