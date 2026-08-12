@@ -173,12 +173,12 @@ gumb.addEventListener('click', () => {
         const bBroj = Number(b)
 
         if (isNaN(aBroj)) {
-            rezultat.innerHTML = 'Vrijednost A nije broj'
+            rezultat.innerHTML = 'Unesena duljina nije broj'
             return
         }
 
         if (isNaN(bBroj)) {
-            rezultat.innerHTML = 'Vrijednost B nije broj'
+            rezultat.innerHTML = 'Unesena širina nije broj'
             return
         }
 
@@ -196,7 +196,7 @@ gumb.addEventListener('click', () => {
         const brojA = Number(a)
 
         if (isNaN(brojA)) {
-            rezultat.innerHTML = 'Vrijednost A nije broj'
+            rezultat.innerHTML = 'Uneseni podatak nije broj'
             return
         }
 
@@ -226,7 +226,7 @@ gumb.addEventListener('click', () => {
         let zbroj = 0
 
         if (!a.includes(',')) {
-            rezultat.innerHTML = 'Vrijednosti u nizu moraju biti odvojene zarezima'
+            rezultat.innerHTML = 'Podatci u nizu moraju biti odvojene zarezima'
             return
         }
 
@@ -290,7 +290,7 @@ gumb.addEventListener('click', () => {
         const n = Number(a)
 
         if (isNaN(n)) {
-            rezultat.innerHTML = 'Vrijednost A nije broj'
+            rezultat.innerHTML = 'Uneseni podatci nisu brojevi'
             return
         }
 

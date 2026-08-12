@@ -1,15 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edunova generator lozinki</title>
     <link rel="stylesheet" href="app.css">
 </head>
+
 <body>
 
+    <main>
+
+        <header>
+            <h1>Generator lozinki</h1>
+            <p>Odaberite kakvu bi lozinku htjeli generirati</p>
+        </header>
+
+        <section class="card">
+
+            <div class="grid">
+
+                <label class="field">
+                    <span>Dužina lozinke</span>
+                    <input id="duzina" type="number">
+                </label>
+
+                <label class="field">
+                    <span>Broj lozinki koje je potrebno generirati</span>
+                    <input id="broj" type="number">
+                </label>
+
+                <label class="field">
+                    <span>Velika slova</span>
+                    <input id="velikaSlova" type="checkbox">
+                </label>
+
+                <label class="field">
+                    <span>Mala slova</span>
+                    <input id="malaSlova" type="checkbox">
+                </label>
+
+                <label class="field">
+                    <span>Brojevi</span>
+                    <input id="brojevi" type="checkbox">
+                </label>
+
+                <label class="field">
+                    <span>Interpunkcijski znakovi</span>
+                    <input id="interpunkcija" type="checkbox">
+                </label>
+
+                <label class="field">
+                    <span>Dozvoli ponavljanje znakova</span>
+                    <input id="ponavljanje" type="checkbox">
+                </label>
+
+                <label class="field">
+                    <span>Lozinka počinje brojem</span>
+                    <input id="pocetakBroj" type="checkbox">
+                </label>
+
+                <label class="field">
+                    <span>Lozinka počinje interpunkcijskim znakom</span>
+                    <input id="pocetakInterpunkcija" type="checkbox">
+                </label>
+
+                <label class="field">
+                    <span>Lozinka završava brojem</span>
+                    <input id="krajBroj" type="checkbox">
+                </label>
+
+                <label class="field">
+                    <span>Lozinka završava interpunkcijskim znakom</span>
+                    <input id="krajInterpunkcija" type="checkbox">
+                </label>
+
+                <button id="izvedi" class="btn" type="button">
+                    Izvrši
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="resultCard">
+
+            <h2>Rezultat</h2>
+
+            <div id="rezultat" class="result" aria-live="polite">
+                —
+            </div>
+
+        </section>
+
+    </main>
 
     <script src="app.js"></script>
-    
+
 </body>
+
 </html>
