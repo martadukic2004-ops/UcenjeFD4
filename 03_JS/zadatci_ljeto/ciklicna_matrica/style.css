@@ -1,3 +1,128 @@
-body{
-    background-color: aquamarine;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: whitesmoke;
+    color: black;
+}
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header p {
+    margin: 0;
+    color: black;
+}
+
+.card,
+.resultCard {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.field span,
+.selectWrap span {
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 10px 25px;
+    border-radius: 6px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+}
+
+.selectWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.resultCard {
+    min-height: 200px;
+}
+
+.resultCard h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+#rezultat {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid black;
+    padding: 8px 12px;
+    min-width: 45px;
+    text-align: right;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+@media (max-width: 600px) {
+    main {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card,
+    .resultCard {
+        padding: 20px;
+    }
 }

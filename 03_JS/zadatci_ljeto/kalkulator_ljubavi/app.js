@@ -3,10 +3,32 @@ const imeSimpatije = document.getElementById('imeSimpatije')
 const izracunaj = document.getElementById('izracunaj')
 const rezultat = document.getElementById('rezultat')
 
+
 izracunaj.addEventListener('click', function () {
 
     let ime1 = mojeIme.value.toUpperCase()
     let ime2 = imeSimpatije.value.toUpperCase()
+
+    if (ime1 === '' || ime2 === '') {
+        rezultat.innerHTML = 'Molim vas unesite imena u navedena polja'
+        return
+    }
+
+    let niz1 = napraviNiz(ime1, ime2)
+    let ljubav1 = izracunajLjubav(niz1)
+
+    let niz2 = napraviNiz(ime2, ime1)
+    let ljubav2 = izracunajLjubav(niz2)
+
+    let ljubav = Math.max(ljubav1, ljubav2)
+
+    rezultat.innerHTML = ljubav + '%'
+
+})
+
+
+function napraviNiz(ime1, ime2) {
+
     let imena = ime1 + ime2
 
     let red1 = []
@@ -16,7 +38,6 @@ izracunaj.addEventListener('click', function () {
         let broj = prebrojiSlovo(ime1[i], imena)
 
         red1.push(broj)
-
     }
 
     let red2 = []
@@ -26,16 +47,10 @@ izracunaj.addEventListener('click', function () {
         let broj = prebrojiSlovo(ime2[i], imena)
 
         red2.push(broj)
-
     }
 
-    let niz = red1.concat(red2)
-
-    let ljubav = izracunajLjubav(niz)
-
-    rezultat.textContent = ljubav + '%'
-
-})
+    return [...red1, ...red2]
+}
 
 
 function prebrojiSlovo(slovo, imena) {
@@ -47,11 +62,9 @@ function prebrojiSlovo(slovo, imena) {
         if (imena[i] === slovo) {
             broj++
         }
-
     }
 
     return broj
-
 }
 
 
@@ -71,17 +84,13 @@ function noviRed(niz) {
             let znamenke = zbroj.toString()
 
             for (let j = 0; j < znamenke.length; j++) {
-
                 rezultat.push(Number(znamenke[j]))
-
             }
 
         } else {
 
             rezultat.push(zbroj)
-
         }
-
     }
 
     if (niz.length % 2 !== 0) {
@@ -93,34 +102,26 @@ function noviRed(niz) {
             let znamenke = sredina.toString()
 
             for (let j = 0; j < znamenke.length; j++) {
-
                 rezultat.push(Number(znamenke[j]))
-
             }
 
         } else {
 
             rezultat.push(sredina)
-
         }
-
     }
 
     return rezultat
-
 }
 
 
 function izracunajLjubav(niz) {
 
     if (niz.length <= 2) {
-
         return niz[0] * 10 + niz[1]
-
     }
 
     let novi = noviRed(niz)
 
     return izracunajLjubav(novi)
-
 }

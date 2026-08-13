@@ -1,15 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edunova ciklična matrica</title>
+    <title>Edunova generator tablica</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+    <main>
+
+        <header>
+
+            <h1>Generator tablica</h1>
+            <p>Unesite željeni broj stupaca i kolona te generirajte tablicu</p>
+        </header>
+
+        <section class="card">
+            <div class="grid">
+                <label class="field">
+                    <span>Redovi</span>
+                    <input id="redovi" type="number" />
+                </label>
+
+                <label class="field">
+                    <span>Kolone</span>
+                    <input id="kolone" type="number" />
+                </label>
+            </div>
+
+            <button id="izvedi" class="btn" type="button">Izvrši</button>
+
+        </section>
+
+        <section class="card">
+            <label class="selectWrap">
+                <span>Smjer</span>
+                <select id="zadatak">
+                    <option value="1">1. Dolje desno početak u smjeru kazaljke na satu</option>
+                    <option value="2">2. Dolje lijevo početak u smjeru kazaljke na satu</option>
+                    <option value="3">3. Gore lijevo početak u smjeru kazaljke na satu</option>
+                    <option value="4">4. Gore desno početak u smjeru kazaljke na satu</option>
+                    <option value="5">5. Dolje desno početak u kontra smjeru kazaljke na satu</option>
+                    <option value="6">6. Dolje lijevo početak u kontra smjeru kazaljke na satu</option>
+                    <option value="7">7. Gore lijevo početak u kontra smjeru kazaljke na satu</option>
+                    <option value="8">8. gore desno početak u kontra smjeru kazaljke na satu</option>
+                    <option value="9">9. Sredina lijevo u smjeru kazaljke na satu</option>
+                    <option value="10">10. Sredina desno u smjeru kazaljke na satu</option>
+                    <option value="11">11. Sredina gore u smjeru kazaljke na satu</option>
+                    <option value="12">12. Sredina dolje u smjeru kazaljke na satu</option>
+                    <option value="13">13. Sredina lijevo u kontra smjeru kazaljke na satu</option>
+                    <option value="14">14. Sredina desno u kontra smjeru kazaljke na satu</option>
+                    <option value="15">15. Sredina gore u kontra smjeru kazaljke na satu</option>
+                    <option value="16">16. Sredina dolje u kontra smjeru kazaljke na satu</option>
+                </select>
+            </label>
+
+        </section>
+
+        <div id="rezultat">
+            <section class="resultCard">
+                <h2>Rezultat</h2>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <small>&copy; Edunova generator tablice</small>
+    </footer>
 
     <script src="skripta.js"></script>
-    
+
 </body>
+
 </html>
