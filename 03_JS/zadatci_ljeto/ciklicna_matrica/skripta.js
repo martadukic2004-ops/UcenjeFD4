@@ -33,51 +33,189 @@ izvedi.addEventListener('click', () => {
 
     }
 
+    function popuniSpiralu(pocetniRed, pocetniStupac, smjerovi) {
+
+        let red = pocetniRed
+        let stupac = pocetniStupac
+        let broj = 1
+
+        let minRed = 0
+        let maxRed = redovi - 1
+        let minStupac = 0
+        let maxStupac = kolone - 1
+
+        let smjer = 0
+
+        while (broj <= redovi * kolone) {
+
+            matrica[red][stupac] = broj
+            broj++
+
+            const sljedeciRed = red + smjerovi[smjer][0]
+            const sljedeciStupac = stupac + smjerovi[smjer][1]
+
+            if (
+                sljedeciRed < minRed ||
+                sljedeciRed > maxRed ||
+                sljedeciStupac < minStupac ||
+                sljedeciStupac > maxStupac ||
+                matrica[sljedeciRed][sljedeciStupac] !== 0
+            ) {
+
+                smjer++
+
+                if (smjer === 4) {
+                    smjer = 0
+                }
+
+            }
+
+            red += smjerovi[smjer][0]
+            stupac += smjerovi[smjer][1]
+        }
+    }
+
     if (zadatak === 1) {
         //Početak 1. zadatka 
         // 1. Dolje desno početak u smjeru kazaljke na satu
+
+        popuniSpiralu(
+            redovi -1,
+            kolone -1,
+            [
+                [0, -1],
+                [-1,0],
+                [0, 1],
+                [1,0]
+            ]
+        )
+
     }
     //Završetak 1. zadatka 
 
     if (zadatak === 2) {
         //Početak 2. zadatka
         //2. Dolje lijevo početak u smjeru kazaljke na satu
+
+        popuniSpiralu(
+            redovi -1,
+            0,
+            [
+                [-1, 0],
+                [0, 1],
+                [1, 0],
+                [0, -1]
+            ]
+        )
+
     }
     //Završetak 2. zadatka
 
     if (zadatak === 3) {
         //Početak 3. zadatka
         //3. Gore lijevo početak u smjeru kazaljke na satu
+
+        popuniSpiralu(
+            0,
+            0,
+            [
+                [0, 1],
+                [1, 0],
+                [0, -1],
+                [-1, 0]
+            ]
+        )
+
     }
     //Završetak 3. zadatka
 
     if (zadatak === 4) {
         //Početak 4. zadatka
         //4. Gore desno početak u smjeru kazaljke na satu
+
+        popuniSpiralu(
+            0,
+            kolone -1, 
+            [
+                [1, 0],
+                [0, -1],
+                [-1, 0],
+                [0, 1]
+            ]
+        )
+
     }
     //Završetak 4. zadatka
 
     if (zadatak === 5) {
         //Početak 5. zadatka
         //5. Dolje desno početak u kontra smjeru kazaljke na satu
+
+        popuniSpiralu(
+            redovi -1,
+            kolone -1, 
+            [
+                [-1, 0],
+                [0, -1],
+                [1, 0],
+                [0, 1]
+            ]
+        )
+
     }
     //Završetak 5. zadatka
 
     if (zadatak === 6) {
         //Početak 6. zadatka
         //6. Dolje lijevo početak u kontra smjeru kazaljke na satu
+
+        popuniSpiralu(
+            redovi -1,
+            0
+            [
+                [0, 1],
+                [-1, 0],
+                [0, -1],
+                [1, 0]
+            ]
+        )
+
     }
     //Završetak 6. zadatka
 
     if (zadatak === 7) {
         //Početak 7. zadatka
         //7. Gore lijevo početak u kontra smjeru kazaljke na satu
+
+        popuniSpiralu(
+            0,
+            0, 
+            [
+                [1, 0], 
+                [0, 1], 
+                [-1, 0],
+                [0, -1]
+            ]
+        )
+
     }
     //Završetak 7. zadatka
 
     if (zadatak === 8) {
         //Početak 8. zadatka
         //8. gore desno početak u kontra smjeru kazaljke na satu
+
+        popuniSpiralu(
+            0,
+            kolone -1, 
+            [
+                [0, -1], 
+                [1, 0], 
+                [0, 1], 
+                [-1, 0]
+            ]
+        )
+
     }
     //Završetak 8. zadatka
 
@@ -144,5 +282,4 @@ izvedi.addEventListener('click', () => {
     html += '</table>'
 
     rezultat.innerHTML = html
-
 })
