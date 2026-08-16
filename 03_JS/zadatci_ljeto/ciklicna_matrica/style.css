@@ -79,7 +79,10 @@ select {
 }
 
 .resultCard {
-    min-height: 200px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
 }
 
 .resultCard h2 {
@@ -90,6 +93,10 @@ select {
 #rezultat {
     margin-top: 20px;
     overflow-x: auto;
+}
+
+.matrica {
+    margin-bottom: 50px;
 }
 
 table {
@@ -103,6 +110,25 @@ td {
     min-width: 45px;
     text-align: right;
     font-family: 'Times New Roman', Times, serif;
+}
+
+#ponovi {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#ponovi p {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+#ponovi button {
+    padding: 6px 15px;
+    margin: 0 3px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
 }
 
 .footer {

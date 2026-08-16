@@ -2,10 +2,16 @@ const izvedi = document.getElementById('izvedi')
 
 izvedi.addEventListener('click', () => {
 
+    let nastavi = 'DA'
+
     const redoviInput = document.getElementById('redovi')
     const koloneInput = document.getElementById('kolone')
     const zadatakInput = document.getElementById('zadatak')
     const rezultat = document.getElementById('rezultat')
+
+    const ponovi = document.getElementById('ponovi')
+    const da = document.getElementById('da')
+    const ne = document.getElementById('ne')
 
     const redovi = Number(redoviInput.value)
     const kolone = Number(koloneInput.value)
@@ -75,7 +81,7 @@ izvedi.addEventListener('click', () => {
         }
     }
 
-    function sredisnjaSpirala(pocetniRed, pocetniStupac, smjerovi){
+    function sredisnjaSpirala(pocetniRed, pocetniStupac, smjerovi) {
 
         let red = pocetniRed
         let stupac = pocetniStupac
@@ -87,42 +93,44 @@ izvedi.addEventListener('click', () => {
         let smjer = 0
         let brojKoraka = 1
 
-        while (broj <= redovi * kolone){
+        while (broj <= redovi * kolone) {
 
-            for(let i = 0; i < brojKoraka; i++){
+            for (let ponavljanje = 0; ponavljanje < 2; ponavljanje++) {
 
-                red += smjerovi[smjer][0]
-                stupac += smjerovi [smjer][1]
+                for (let i = 0; i < brojKoraka; i++) {
 
-                if(
-                    red >= 0 &&
-                    red < redovi &&
-                    stupac >= 0 &&
-                    stupac < kolone &&
-                    matrica [red][stupac] === 0
-                ){
-                    matrica[red][stupac] = broj
-                    broj++
+                    red += smjerovi[smjer][0]
+                    stupac += smjerovi[smjer][1]
+
+                    if (
+                        red >= 0 &&
+                        red < redovi &&
+                        stupac >= 0 &&
+                        stupac < kolone &&
+                        matrica[red][stupac] === 0
+                    ) {
+                        matrica[red][stupac] = broj
+                        broj++
+                    }
+
+                    if (broj > redovi * kolone) {
+                        break
+                    }
                 }
 
-                if(broj > redovi * kolone){
+                smjer++
+
+                if (smjer === 4) {
+                    smjer = 0
+                }
+
+                if (broj > redovi * kolone) {
                     break
                 }
-
             }
 
-            smjer++
-
-            if(smjer === 4){
-                smjer = 0
-            }
-
-            if(broj > redovi * kolone){
-                break
-            }
+            brojKoraka++
         }
-
-        brojKoraka++
     }
 
     if (zadatak === 1) {
@@ -130,13 +138,13 @@ izvedi.addEventListener('click', () => {
         // 1. Dolje desno početak u smjeru kazaljke na satu
 
         popuniSpiralu(
-            redovi -1,
-            kolone -1,
+            redovi - 1,
+            kolone - 1,
             [
                 [0, -1],
-                [-1,0],
+                [-1, 0],
                 [0, 1],
-                [1,0]
+                [1, 0]
             ]
         )
 
@@ -148,7 +156,7 @@ izvedi.addEventListener('click', () => {
         //2. Dolje lijevo početak u smjeru kazaljke na satu
 
         popuniSpiralu(
-            redovi -1,
+            redovi - 1,
             0,
             [
                 [-1, 0],
@@ -185,7 +193,7 @@ izvedi.addEventListener('click', () => {
 
         popuniSpiralu(
             0,
-            kolone -1, 
+            kolone - 1,
             [
                 [1, 0],
                 [0, -1],
@@ -202,8 +210,8 @@ izvedi.addEventListener('click', () => {
         //5. Dolje desno početak u kontra smjeru kazaljke na satu
 
         popuniSpiralu(
-            redovi -1,
-            kolone -1, 
+            redovi - 1,
+            kolone - 1,
             [
                 [-1, 0],
                 [0, -1],
@@ -220,8 +228,8 @@ izvedi.addEventListener('click', () => {
         //6. Dolje lijevo početak u kontra smjeru kazaljke na satu
 
         popuniSpiralu(
-            redovi -1,
-            0
+            redovi - 1,
+            0,
             [
                 [0, 1],
                 [-1, 0],
@@ -239,10 +247,10 @@ izvedi.addEventListener('click', () => {
 
         popuniSpiralu(
             0,
-            0, 
+            0,
             [
-                [1, 0], 
-                [0, 1], 
+                [1, 0],
+                [0, 1],
                 [-1, 0],
                 [0, -1]
             ]
@@ -257,11 +265,11 @@ izvedi.addEventListener('click', () => {
 
         popuniSpiralu(
             0,
-            kolone -1, 
+            kolone - 1,
             [
-                [0, -1], 
-                [1, 0], 
-                [0, 1], 
+                [0, -1],
+                [1, 0],
+                [0, 1],
                 [-1, 0]
             ]
         )
@@ -273,49 +281,142 @@ izvedi.addEventListener('click', () => {
         //Početak 9. zadatka
         //9. Sredina lijevo u smjeru kazaljke na satu
 
-        
+        sredisnjaSpirala(
+            Math.floor((redovi - 1) / 2),
+            Math.floor((kolone - 1) / 2),
+            [
+                [0, -1],
+                [-1, 0],
+                [0, 1],
+                [1, 0]
+            ]
+        )
+
     }
     //Završetak 9. zadatka
 
     if (zadatak === 10) {
         //Početak 10. zadatka
         //10. Sredina desno u smjeru kazaljke na satu
+
+        sredisnjaSpirala(
+            Math.floor((redovi - 1) / 2),
+            Math.floor((kolone - 1) / 2),
+            [
+                [0, 1],
+                [1, 0],
+                [0, -1],
+                [-1, 0]
+            ]
+        )
+
     }
     //Završetak 10. zadatka
 
     if (zadatak === 11) {
         //Početak 11. zadatka
         //11. Sredina gore u smjeru kazaljke na satu
+
+        sredisnjaSpirala(
+            Math.floor((redovi - 1) / 2),
+            Math.floor((kolone - 1) / 2),
+            [
+                [-1, 0],
+                [0, 1],
+                [1, 0],
+                [0, -1]
+            ]
+        )
     }
     //Završetak 11. zadatka
 
     if (zadatak === 12) {
         //Početak 12. zadatka
         //12. Sredina dolje u smjeru kazaljke na satu
+
+        sredisnjaSpirala(
+            Math.floor((redovi - 1) / 2),
+            Math.floor((kolone - 1) / 2),
+            [
+                [1, 0],
+                [0, -1],
+                [-1, 0],
+                [0, 1]
+            ]
+        )
+
     }
     //Završetak 12. zadatka
 
     if (zadatak === 13) {
         //Početak 13. zadatka
         //13. Sredina lijevo u kontra smjeru kazaljke na satu
+
+        sredisnjaSpirala(
+            Math.floor((redovi - 1) / 2),
+            Math.floor((kolone - 1) / 2),
+            [
+                [0, -1],
+                [1, 0],
+                [0, 1],
+                [-1, 0]
+            ]
+        )
+
     }
     //Završetak 13. zadatka
 
     if (zadatak === 14) {
         //Početak 14. zadatka
         //14. Sredina desno u kontra smjeru kazaljke na satu
+
+        sredisnjaSpirala(
+            Math.floor((redovi - 1) / 2),
+            Math.floor((kolone - 1) / 2),
+            [
+                [0, 1],
+                [-1, 0],
+                [0, -1],
+                [1, 0]
+            ]
+        )
+
     }
     //Završetak 14. zadatka
 
     if (zadatak === 15) {
         //Početak 15. zadatka
         //15. Sredina gore u kontra smjeru kazaljke na satu
+
+        sredisnjaSpirala(
+            Math.floor((redovi - 1) / 2),
+            Math.floor((kolone - 1) / 2),
+            [
+                [-1, 0],
+                [0, -1],
+                [1, 0],
+                [0, 1]
+            ]
+        )
+
     }
     //Završetak 15. zadatka
 
     if (zadatak === 16) {
         //Početak 16. zadatka
         //16. Sredina dolje u kontra smjeru kazaljke na satu
+
+        sredisnjaSpirala(
+            Math.floor((redovi - 1) / 2),
+            Math.floor((kolone - 1) / 2),
+            [
+                [1, 0],
+                [0, 1],
+                [-1, 0],
+                [0, -1]
+            ]
+        )
+
     }
     //Završetak 16. zadatka
 
@@ -333,5 +434,15 @@ izvedi.addEventListener('click', () => {
 
     html += '</table>'
 
-    rezultat.innerHTML = html
+    rezultat.innerHTML += '<div class="matrica">' + html + '</div>'
+
+    ponovi.style.display = 'block'
+
+    da.addEventListener('click', () => {
+        ponovi.style.display = 'none'
+    })
+
+    ne.addEventListener('click', () => {
+        ponovi.style.display = 'none'
+    })
 })
