@@ -75,6 +75,56 @@ izvedi.addEventListener('click', () => {
         }
     }
 
+    function sredisnjaSpirala(pocetniRed, pocetniStupac, smjerovi){
+
+        let red = pocetniRed
+        let stupac = pocetniStupac
+        let broj = 1
+
+        matrica[red][stupac] = broj
+        broj++
+
+        let smjer = 0
+        let brojKoraka = 1
+
+        while (broj <= redovi * kolone){
+
+            for(let i = 0; i < brojKoraka; i++){
+
+                red += smjerovi[smjer][0]
+                stupac += smjerovi [smjer][1]
+
+                if(
+                    red >= 0 &&
+                    red < redovi &&
+                    stupac >= 0 &&
+                    stupac < kolone &&
+                    matrica [red][stupac] === 0
+                ){
+                    matrica[red][stupac] = broj
+                    broj++
+                }
+
+                if(broj > redovi * kolone){
+                    break
+                }
+
+            }
+
+            smjer++
+
+            if(smjer === 4){
+                smjer = 0
+            }
+
+            if(broj > redovi * kolone){
+                break
+            }
+        }
+
+        brojKoraka++
+    }
+
     if (zadatak === 1) {
         //Početak 1. zadatka 
         // 1. Dolje desno početak u smjeru kazaljke na satu
@@ -222,6 +272,8 @@ izvedi.addEventListener('click', () => {
     if (zadatak === 9) {
         //Početak 9. zadatka
         //9. Sredina lijevo u smjeru kazaljke na satu
+
+        
     }
     //Završetak 9. zadatka
 
