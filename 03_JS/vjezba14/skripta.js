@@ -105,8 +105,8 @@ console.log('****************************')
 
 // mjenjanje kompletne strukture (premapiranje)
 
-const mojaStruktura = 
-korisnici.map(({id, ime, prezime}) => ({sifra : id, osoba: ime + ' ' +prezime}))
+const mojaStruktura =
+    korisnici.map(({ id, ime, prezime }) => ({ sifra: id, osoba: ime + ' ' + prezime }))
 
 console.table(mojaStruktura)
 
@@ -146,5 +146,25 @@ console.log('****************************')
 
 console.log(korisnici.reduce((suma, o) => suma + o.godine, 0)) // 0 je početna vrijednost suma
 
+let suma = 0
+korisnici.forEach(o => suma += o.godine)
+console.log(suma)
+
+suma = 0
+for(let i = 0; i < korisnici.length; i++){
+    suma += korisnici[i].godine
+}
+console.log(suma)
+
 
 console.log('****************************')
+
+// some()
+
+console.log(korisnici.some(o => o.admin) ? 'Ima admina' : 'Nema admina')
+
+
+console.log('****************************')
+
+// every()
+console.log(korisnici.every(o => o.godine >= 18) ? 'Svi su punoljetni' : 'Nisu svi punoljetni')
